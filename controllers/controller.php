@@ -9,14 +9,14 @@
         $function($data);
     }
     function view(&$data){
-        $data['view'] = student();
+        $data['view'] = view_student();
         $data['page'] = "test/view";
     }
     function add_form(&$data){
         $data['page']= "test/add";
     }
     
-   function add_info(&$data) {
+   function add_student(&$data) {
        $result = m_add($_POST);
        if($result){
            $action = "view";
@@ -36,7 +36,17 @@
    }
 
    function edit(&$data) {
-    $data['view'] = m_edit();
-       $data['page'] = "test/edit";
+        $data['view'] = m_edit();
+        $data['page'] = "test/edit";
    }
+
+   function edit_form(&$data) {
+    $result = update_data($_POST);
+    if($result){
+        $action = "view";
+    }else{
+        $action = "edit";
+    }
+    header("Location: index.php?action=$action");
+}
 ?>

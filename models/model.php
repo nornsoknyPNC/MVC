@@ -1,12 +1,12 @@
 <?php 
-    function student() {
+    function view_student() {
         include "connection.php";
         $query = "SELECT * FROM student";
         $result = mysqli_query($conn,$query);
         $rows = [];
         if($result && mysqli_num_rows($result)){
-            foreach($result as $info){
-                $rows[] = $info;
+            foreach($result as $row){
+                $rows[] = $row;
             }
         }
         return $rows;
@@ -48,6 +48,19 @@
         $query = "SELECT * FROM student WHERE id = $id";
         include "connection.php";
         $result = mysqli_query($conn,$query);
+        return $result; 
+     }
+
+     function update_data() {
+        $name = $_POST['username'];
+        $class = $_POST['class'];
+        $mark = $_POST['score'];
+        $sex = $_POST['sex'];
+        $id = $_POST['id'];
+      
+        include "connection.php";
+        $update = "UPDATE student SET name='$name',class='$class',mark='$mark',sex='$sex' WHERE id = $id";
+        $result = mysqli_query( $conn, $update);
         return $result;
-    }
+     }
 ?>

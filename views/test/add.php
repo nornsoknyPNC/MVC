@@ -9,7 +9,7 @@
                     </div>
                     <div class="card-body">
                         
-                        <form action="index.php?action=add_info" method="post">
+                        <form action="index.php?action=add_student" method="post">
                             <div class="form-group">
                                 <label for="name">Full Name:</label>
                                 <input type="text" name="username" class="form-control" placeholder="Username">
