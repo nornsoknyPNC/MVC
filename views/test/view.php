@@ -10,6 +10,7 @@
             <th>Mark</th>
             <th>Sex</th>
             <th>Action</th>
+            <!-- <th>Profile</th> -->
         </tr>
     </thead>
     <?php 
@@ -24,10 +25,11 @@
             <td><?php echo $col['mark']; ?></td>
             <td><?php echo $col['sex']; ?></td>
             <td>
-            <a href="index.php?action=detail&id=<?php echo $col['id'];?>"><i class="material-icons">remove_red_eye</i></a>
-            <a href="index.php?action=edit&id=<?php echo $col['id'];?>"><i class="material-icons text-success">edit</i></a>
-            <a href="index.php?action=delete&id=<?php echo $col['id'];?>" onClick="return confirm('Are your sure to delete?')"><i class="material-icons text-danger">delete</i></a>
+                <a href="index.php?action=detail&id=<?php echo $col['id'];?>"><i class="material-icons">remove_red_eye</i></a>
+                <a href="index.php?action=edit&id=<?php echo $col['id'];?>"><i class="material-icons text-success">edit</i></a>
+                <a href="index.php?action=delete&id=<?php echo $col['id'];?>" onClick="return confirm('Are your sure to delete?')"><i class="material-icons text-danger">delete</i></a>
             </td>
+            <!-- <td><img src="views/img/<?php echo $col['profile']; ?>" width="90px", height="80px"></td> -->
         </tr>
     </tbody>
     <?php 

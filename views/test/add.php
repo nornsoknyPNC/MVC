@@ -9,7 +9,7 @@
                     </div>
                     <div class="card-body">
                         
-                        <form action="index.php?action=add_student" method="post">
+                        <form action="index.php?action=add_student" method="post" enctype="multipart/form-data">
                             <div class="form-group">
                                 <label for="name">Full Name:</label>
                                 <input type="text" name="username" class="form-control" placeholder="Username">
@@ -30,6 +30,9 @@
                                 <label for="radio">Gender:</label><br>
                                 <input type="radio" name="sex" value="Male">Male <br>
                                 <input type="radio" name="sex" value="Female">Female
+                            </div>
+                            <div class="form-group">
+                                <input type="file" name="profile">
                             </div>
                             </div>
                             <div class="card-footer">

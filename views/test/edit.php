@@ -35,6 +35,9 @@
                                     <input type="radio" name="sex" <?php if ($col['sex'] == "Female") { ?> checked="checked" <?php } ?> value="Female">Female
 
                                 </div>
+                                <div class="form-group">
+                                <input type="file" name="profile">
+                            </div>
                 </div>
                 <div class="card-footer">
                     <a href="index.php?action=view" class="btn btn-success" id="back">Go Back</a>

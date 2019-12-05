@@ -49,4 +49,21 @@
     }
     header("Location: index.php?action=$action");
 }
+
+function profile(&$data) {
+    $data['view'] = m_profile();
+    $data['page'] = "test/profile";
+}
+
+function change_profile(&$data) {
+    $profile = update_profile($_POST);
+    $id = $_GET['id'];
+    if($profile) {
+        $action = "detail&id";
+    }else{
+        $action = "profile";
+    }
+    header("Location: index.php?action=$action");
+    }
+
 ?>
